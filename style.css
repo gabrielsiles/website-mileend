@@ -1,0 +1,212 @@
+
+body{
+    display: block;
+    background-color: #fbfbfb;
+    font-family: 'SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif';
+    color:#1d1d1f;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    height: 100%;
+
+}
+
+
+
+/* Style the navigation bar links */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Left-aligned link (logo) */
+.navbar a.logo {
+    float: left;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d1d1f;
+}
+
+.navbar a.logo:hover {
+    float: left;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #1d1d1f;
+}
+
+/* Center-aligned links (home, about, team) */
+.navbar .navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .navbar-center a {
+    display: block;
+    text-decoration: none;
+    color: #fbfbfb;
+    text-transform: uppercase;
+}
+
+/* Right-aligned link (contact) */
+.navbar a.right {
+    float: right;
+    color: #fbfbfb;
+    margin-right: 50px;
+    padding: 10px;
+
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Style for the title */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align the title and paragraph vertically */
+    height: 85vh;
+    text-align: center; /* Center the text */
+    position: relative;
+    z-index: 1;
+}
+
+.header .title {
+    color:#1d1d1f; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    animation: fadeIn 3s ease-in-out forwards; /* Adjust the delay as needed */
+    font-size: 3rem;
+}
+
+.header .subtitle {
+    color:#1d1d1f;
+    animation: fadeIn 7s ease-in-out forwards; /* Adjust the delay as needed */
+    margin: 30px;
+    font-size: 2rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+    .header .title {
+        font-size: 2rem; /* adjust based on your needs */
+    }
+
+    .header .subtitle {
+        font-size: 1.2rem; /* adjust based on your needs */
+    }
+}
+
+
+
+.container-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+
+.section1 {
+    background-image: url('/img-section1.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fbfbfb;
+}
+
+.content {
+    margin-bottom: 250px;
+    text-align: center;
+    padding: 2em; /* some padding around your text */
+    width: 80%;
+    height: 200px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin: 30px;
+    
+}
+.content p{
+    scale: 1.2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content h1, .content p {
+    animation: fadeIn 5s ease-in-out;
+}
+
+
+.animate-text {
+    animation: fadeIn 5s ease-in-out forwards; /* 'forwards' will retain the end state */
+}
+
+
+.section2{
+    background-color: #1d1d1f;
+    color: #fbfbfb;
+    height: 100vh;
+}
+
+.section3{
+    background-color: #fbfbfb;
+    color:#1d1d1f; 
+    height: 100vh;
+}
+
+
+
