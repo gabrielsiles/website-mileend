@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     display: block;
     background-color: #fbfbfb;
@@ -10,7 +12,6 @@ body{
     padding: 0;
     min-width: 320px;
     height: 100%;
-
 }
 
 
@@ -25,6 +26,7 @@ body{
     z-index: 1;
     overflow: hidden;
     width: 100%;
+    font-size: 1.6rem;
 }
 
 /* Left-aligned link (logo) */
@@ -73,7 +75,69 @@ body{
 
 
 .navbar a:hover {
-    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*Style pour le navbar en noir*/
+/* Style for the black text navigation bar */
+.black-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+/* Left-aligned link (logo) */
+.black-navbar a.logo {
+    float: left;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000;
+}
+
+.black-navbar a.logo:hover {
+    float: left;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Center-aligned links (home, about, team) */
+.black-navbar .navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.black-navbar .navbar-center a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+/* Right-aligned link (contact) */
+.black-navbar a.right {
+    float: right;
+    color: #000000;
+    margin-right: 50px;
+    padding: 10px;
+
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.black-navbar a:hover {
+    font-weight: bold;
 }
 
 
@@ -85,7 +149,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Align the title and paragraph vertically */
-    height: 85vh;
+    height: 80vh;
     text-align: center; /* Center the text */
     position: relative;
     z-index: 1;
@@ -150,7 +214,7 @@ body{
 
 
 .section1 {
-    background-image: url('/img-section1.jpg');
+    background-image: url('/images/img-mtl.jpg');
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -171,9 +235,10 @@ body{
 .content h1 {
     font-size: 2.5rem;
     margin: 30px;
+    margin-top: 0px;
     
 }
-.content p{
+.content p:hover{
     scale: 1.2;
 }
 
@@ -207,6 +272,105 @@ body{
     color:#1d1d1f; 
     height: 100vh;
 }
+
+/* Style pour la page team.html */
+
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    text-align: justify;
+
+    scroll-snap-align: start;
+    height: 100vh;
+    width: 100%;
+}
+
+.profile-container .left {
+    width: 60%;
+    margin-right: 20px;
+    margin-left: 120px;
+}
+
+.profile-container .left h1{
+    font-size: 3rem;
+    color: #1d1d1f;
+    text-shadow: #1d1d1f;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.profile-container .left h2{
+    font-size: 1.5rem;
+    color: rgb(56, 54, 54);
+    text-shadow: 4px 1px 8px rgba(0,0,0,0.6);
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.profile-container .left p:hover{
+    font-weight: bold;
+}
+
+
+.profile-container .right {
+    width: 550px;
+    height: 550px;
+    overflow: hidden;
+    margin-right: 120px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.profile-container img {
+    width: 100%; /* You can use either width or height, depending on what dimension you want the image to adhere to */
+    height: 90%;
+    object-fit: cover;
+    border:2px solid #fff;
+    box-shadow: 10px 10px 5px #ccc;
+    border-radius:25px;
+}
+
+.profile-container .right {
+    perspective: 1000px;
+    transition: transform 0.5s;
+}
+
+.profile-container .right img {
+    transition: transform 0.5s;
+}
+
+
+
+
+
+
+
+
+/* you can also add some margin or padding for better appearance */
+.profile-container .left, .profile-container .right {
+    padding: 1em;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: black; /* This will make the icons black */
+    text-decoration: none; /* This will remove the underline */
+}
+
+
+.social-icons a:hover i {
+    color: gray; /* Change color when hovering over the icon */
+  
+}
+
+
+    
 
 
 
