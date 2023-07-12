@@ -266,11 +266,26 @@ body{
 .section2{
     background-color: #1d1d1f;
     color: #fbfbfb;
-    height: 100vh;
     display: flex;
     justify-content: space-between;
     overflow: scroll;
 }
+
+@media screen and (max-width: 1000px) {
+    .section2 {
+        display: table;
+    }
+    .section2 .left-half, .section2 .right-half {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .section2 .left-half img, .section2 .right-half img {
+        display: block;
+        margin: auto;
+    }
+}
+
 
 
 .left-half, .right-half {
@@ -387,8 +402,13 @@ body{
 .section3 {
     display: flex;
     justify-content: space-between;
-    height: 80vh;
    
+}
+
+@media screen and (max-width: 1000px) { /* adjust the value as needed */
+    .section3 {
+        display: table;
+    }
 }
 
 .left-half-s3, .right-half-s3 {
@@ -441,12 +461,19 @@ body{
     font-family: 'Courier New', Courier, monospace;
     margin: 20px;
     text-align: justify;
-
     scroll-snap-align: start;
     height: 100vh;
     width: 100%;
     overflow: auto;
 }
+
+/* Media query for small screens */
+@media screen and (max-width: 1000px) { /* adjust the value as needed */
+    .profile-container {
+        display: table;
+    }
+}
+
 
 .profile-container .left {
     width: 60%;
