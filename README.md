@@ -6,6 +6,8 @@ Website for les milend boys
 - [ ] Create a page to add new personal projects featured on the website
 - [ ] Add our social networks
 - [ ] Create a contact page with the backend
-- [ ] Make the website responsive
+- [x] Make the website responsive
 - [ ] Add our location
+- [ ] Create a logo
+
 
