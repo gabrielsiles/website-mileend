@@ -4,7 +4,7 @@ html{
 body{
     display: block;
     background-color: #fbfbfb;
-    font-family: 'SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif';
+      font-family: 'Courier New', Courier, monospace;
     color:#1d1d1f;
     font-size: 16px;
     line-height: 1.5;
@@ -142,7 +142,7 @@ body{
 
 
 
-/* Style for the title */
+/* Style pour la page home pour la 1 ieme div */
 
 .header {
     display: flex;
@@ -212,7 +212,7 @@ body{
 
 
 
-
+/* Style pour la page home pour le 2 ieme div */
 .section1 {
     background-image: url('/images/img-mtl.jpg');
     background-size: cover;
@@ -261,17 +261,176 @@ body{
 }
 
 
+
+/* Style pour la page home pour le 3 ieme div */
 .section2{
     background-color: #1d1d1f;
     color: #fbfbfb;
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
 }
 
-.section3{
-    background-color: #fbfbfb;
-    color:#1d1d1f; 
-    height: 100vh;
+
+.left-half, .right-half {
+    width: 48%; /* 100% - space between two halves */
+    box-sizing: border-box;
+    text-align: center;
+    margin:50px;
 }
+
+.left-half {
+    overflow: hidden;
+}
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.left-half h2, .left-half p {
+    animation-name: slideFromLeft;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+.right-half h2, .right-half p {
+    animation-name: slideFromRight;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+    
+}
+
+
+.left-half img {
+    animation-name: slideFromTop;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+.right-half img {
+    animation-name: slideFromBottom;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+.left-half img {
+    display: block;
+    margin: auto;
+    width: 70%; 
+    height: 50%;
+    object-fit: cover;
+    border:2px solid #fff;
+    border-radius:25px;
+}
+
+.right-half img {
+    display: block;
+    margin: auto;
+    width: 70%; 
+    height: 50%;
+    object-fit: cover;
+    border:2px solid #fff;
+    border-radius:25px;
+    
+}
+
+
+
+
+
+
+
+/* Style pour la page home pour le 4 ieme div */
+.section3 {
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+   
+}
+
+.left-half-s3, .right-half-s3 {
+    justify-content: center;
+    align-items: center;
+    width: 48%; /* 100% - space between two halves */
+    box-sizing: border-box;
+    margin:100px;
+    height: 100%;
+    
+}
+
+.section3 .left-half-s3 img {
+    display: block;
+    margin: auto;
+    width: 100%; 
+    height: 60%;
+    object-fit: cover;
+    border:2px solid #fff;
+    border-radius:25px;
+    border: 2px solid #0c0a0a;
+    box-shadow: 5px 5px 15px 5px #000000;
+    transition: transform 1.5s;
+}
+.section3 .left-half-s3 img:hover{
+    transform: rotateY(-30deg);
+    transform: rotate3d(1, 1, 1, 360deg);
+} 
+
+
+.section3 .right-half-s3 h2, .section3 .right-half-s3 p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;  /* Centers the text horizontally */
+   
+}
+
+.section3 .right-half-s3{
+    overflow: auto;
+}
+
+
+
 
 /* Style pour la page team.html */
 
@@ -286,6 +445,7 @@ body{
     scroll-snap-align: start;
     height: 100vh;
     width: 100%;
+    overflow: auto;
 }
 
 .profile-container .left {
@@ -347,7 +507,6 @@ body{
 
 
 
-
 /* you can also add some margin or padding for better appearance */
 .profile-container .left, .profile-container .right {
     padding: 1em;
@@ -372,5 +531,40 @@ body{
 
     
 
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-socials, .footer-location {
+    display: flex;
+}
+
+.footer-socials a {
+    margin: 0 10px;
+}
+
+.footer-socials img {
+    width: 24px; /* adjust as needed */
+    height: 24px; /* adjust as needed */
+}
+
+
+
+.footer-location {
+    font-size: 16px;
+}
 
 
