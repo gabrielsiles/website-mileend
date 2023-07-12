@@ -11,10 +11,10 @@ Website for les milend boys
 - [ ] Create a logo
 
 # Members
-Gabriel Siles
-Tristan Blond
-Louis-Charles Chapais
-Guilherme Castro
+- Gabriel Siles
+- Tristan Blond
+- Louis-Charles Chapais
+- Guilherme Castro
 
 
 # How to run the website
