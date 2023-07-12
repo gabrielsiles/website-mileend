@@ -16,3 +16,6 @@ Tristan Blond
 Louis-Charles Chapais
 Guilherme Castro
 
+
+# How to run the website
+
