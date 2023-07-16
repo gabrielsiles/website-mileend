@@ -33,18 +33,19 @@ body{
 .navbar a.logo {
     float: left;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em; /* Adjust as needed */
     font-weight: bold;
     color: #1d1d1f;
 }
 
-.navbar a.logo:hover {
-    float: left;
-    text-decoration: none;
-    font-size: 2em;
-    font-weight: bold;
-    color: #1d1d1f;
+
+
+
+.navbar a.logo img {
+    width: 4.5em; /* Adjust as needed */
+    height: auto; /* Keeps the aspect ratio */
 }
+
 
 /* Center-aligned links (home, about, team) */
 .navbar .navbar-center {
@@ -188,6 +189,7 @@ body{
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    opacity: 0.8;
 }
 
 /* Responsive text size */
@@ -268,7 +270,6 @@ body{
     color: #fbfbfb;
     display: flex;
     justify-content: space-between;
-    overflow: scroll;
 }
 
 @media screen and (max-width: 1000px) {
