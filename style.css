@@ -254,12 +254,12 @@ body{
 }
 
 .content h1, .content p {
-    animation: fadeIn 5s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
 }
 
 
 .animate-text {
-    animation: fadeIn 5s ease-in-out forwards; /* 'forwards' will retain the end state */
+    animation: fadeIn 2s ease-in-out forwards; /* 'forwards' will retain the end state */
 }
 
 
