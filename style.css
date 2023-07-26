@@ -218,13 +218,28 @@ body{
 .section1 {
     background-image: url('/images/img-mtl.jpg');
     background-size: cover;
+    background-position: center center;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fbfbfb;
+    -webkit-animation: kenburns-top 5s ease-out both;
+    animation: kenburns-top 5s ease-out both;
 }
+
+@keyframes kenburns-top {
+    0% {
+        background-position: left bottom;
+        transform: scale(1);
+    }
+    100% {
+        background-position: right top;
+        transform: scale(1.2);
+    }
+}
+
 
 .content {
     margin-bottom: 250px;
