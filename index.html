@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Les Milends Boys</title>
-         <link rel="icon" href="images/icon.png" type="image/x-icon">
-         <meta charset="utf-8">
+        <title>Mile End Software Studios</title>
+        <link rel="icon" href="images/icon.ico" type="image/x-icon">
+        <meta charset="utf-8">
     </head>
 
     <body>
@@ -19,23 +19,21 @@
                <source src="/video-header.mp4" type="video/mp4">
             </video>
         
-            <div class="navbar">
+            <div class="home-nav black-navbar">
                 <a href="/index.html" class="logo">
                     <img src="images/logo-name.png" alt="Logo Description">
                 </a>
-                
                 <div class="navbar-center">
-                    <a href="/index.html">Home</a>
+                    <a href="index.html" >Home</a>
                     <!--<a href="/about.html">About</a>-->
-                    <a href="/team.html">Team</a>
+                    <a href="team.html">Team</a>
                 </div>
-                <a href="/contact.html" class="right">Contact</a> 
+                <a href="contact.html" class="right">Contact</a> 
             </div>
-            
         
             <div class="header">
                 <div class="header-content">
-                    <h1><a class="title" href="index.html">Quantum Tech Software</a></h1>
+                    <h1><a class="title" href="index.html">Mile End Software Studios</a></h1>
                     <p class="subtitle">Make your dreams a reality</p>
                 </div>
             </div>
@@ -105,7 +103,7 @@
                         <a href="your-instagram-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="footer-company">
-                        <p>Les Milend Boys &copy; </p>
+                        <p>Mile End Software Studios &copy; </p>
                     </div>
                 </div>
             </div>
@@ -123,8 +121,10 @@
 
             if(position < screenPosition) {
                 content.classList.add('animate-text');
+                // section1.style.animation ="kenburns-top 5s ease-out both"
             } else {
                 content.classList.remove('animate-text');
+                // section1.style.animation = '';
             }
         });
 

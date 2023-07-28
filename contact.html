@@ -6,8 +6,8 @@
         <!-- Compatible avec telephone -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Les Milends Boys</title>
-        <link rel="icon" href="icon.ico" type="image/x-icon">
+        <title>Mile End Software Studios</title>
+        <link rel="icon" href="images/icon.ico" type="image/x-icon">
         <meta charset="utf-8">
     </head>
 
@@ -15,14 +15,150 @@
 
         
             <div class="black-navbar">
-                <a href="/index.html" class="logo">LOGO</a>
+                <a href="/index.html" class="logo">
+                    <img src="images/logo-name.png" alt="Logo Description">
+                </a>
                 <div class="navbar-center">
-                    <a href="/index.html" >Home</a>
+                    <a href="/index.html">Home</a>
                     <!--<a href="/about.html">About</a>-->
                     <a href="/team.html">Team</a>
                 </div>
                 <a href="/contact.html" class="right">Contact</a> 
             </div>
+
+            <style>
+                form {
+                    max-width: 600px;
+                    margin: 30px auto; 
+                    padding: 20px;
+                    border: 1px solid #ddd;  
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    border-radius: 8px;
+                    }
+                
+                label, input, textarea {
+                  display: block;
+                  width: 60%;
+                  margin-bottom: 10px;
+                }
+                
+                input, textarea {
+                  border: 1px solid #ddd;
+                  border-radius: 4px;  
+                  padding: 10px;
+                }
+                
+                button {
+                  background: #007bff;
+                  color: #fff;
+                  border: 0;
+                  border-radius: 4px;
+                  padding: 10px 20px;
+                }
+                
+                button:hover {
+                  background: #0062cc;
+                }
+                .form-header {
+                    text-align: center; 
+                }
+
+                .form-header p {
+                    font-size: 16px;
+                }
+                
+                </style>  
+                <div class="form-header">
+
+                    <h1>Contact Us</h1>
+                    
+                    <h2>Tech Company</h2>
+                  
+                    <p>
+                      81 rue Saint-Viateur Est, H2T 1A7
+
+                      <br>
+                      mlsstudios@gmail.com
+                    </p>
+                  
+                  </div>
+
+                <form>
+                
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name">
+                
+                  <label for="email">Email:</label>      
+                  <input type="email" id="email" name="email">
+                
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message"></textarea>  
+                
+                  <button type="submit">Send</button>
+                
+                </form>
+
+                 <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-content">
+                        <div class="footer-socials">
+                            <a href="your-discord-link" target="_blank"><i class="fab fa-discord"></i></a>
+                            <a href="mailto:your-email@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                            <a href="your-twitter-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="your-instagram-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="footer-company">
+                            <p>Mile End Software Studios &copy; </p>
+                        </div>
+                    </div>
+                </div>
+            
+            
+                <script>
+                    // Get form elements
+                    const form = document.querySelector('form');
+                    const nameInput = document.querySelector('#name');
+                    const emailInput = document.querySelector('#email');
+                    const messageInput = document.querySelector('#message');
+
+                    // Validate on submit
+                    form.addEventListener('submit', (e) => {
+
+                    // Name validation
+                    if (nameInput.value === '' || nameInput.value == null) {
+
+                    nameInput.style.border = '1px solid red';
+
+                    nameInput.insertAdjacentHTML('beforebegin', '<span style="color: red;">Please enter your name</span>');
+
+                    e.preventDefault();
+
+                    } 
+
+                    // Email validation
+                    if (emailInput.value === '' || emailInput.value == null) {
+
+                    emailInput.style.border = '1px solid red';
+
+                    emailInput.insertAdjacentHTML('beforebegin', '<span style="color: red;">Please enter your email</span>')
+
+                    e.preventDefault();
+
+                    }
+
+                    // Message validation 
+                    if (messageInput.value === '' || messageInput.value == null) {
+
+                    messageInput.style.border = '1px solid red';
+
+                    messageInput.insertAdjacentHTML('beforebegin', '<span style="color: red;">Please enter a message</span>')
+
+                    e.preventDefault();
+
+                    }
+
+                    });
+                </script>
             
     
     </body>
