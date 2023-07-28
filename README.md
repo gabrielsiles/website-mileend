@@ -15,6 +15,7 @@ Website for les milend boys
 - Tristan Blond
 - Louis-Charles Chapais
 - Guilherme Castro
+- Emil Surkhaev
 
 
 # How to run the website
