@@ -59,6 +59,7 @@ body{
     margin-left: 10px;
 }
 
+
 .black-navbar .navbar-center a {
     display: block;
     text-decoration: none;
@@ -549,7 +550,7 @@ body{
     padding: 20px;
     background-color: #000000;
     color: #fff;
-    margin-top: 100px;
+
 }
 
 .footer-content {
