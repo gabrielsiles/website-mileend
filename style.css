@@ -32,6 +32,14 @@ body{
     font-weight: bold;
 }
 
+/* Media query for smartphones */
+@media screen and (max-width: 768px) { 
+    .black-navbar {
+        /* display: block;  */
+        text-align: center; /* Optional: if you want the items centered when stacked */
+    }
+}
+
 /* Left-aligned link (logo) */
 .black-navbar a.logo {
     float: left;
@@ -44,9 +52,25 @@ body{
     align-items: center;
 }
 
+/* Original style for larger screens */
 .black-navbar a.logo img {
     width: 175px; /* Adjust this to your preference */
-    height: 45px; /* This ensures that the image maintains its aspect ratio */
+    height: auto; /* It's better to use 'auto' to ensure the image maintains its aspect ratio */
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 767px) { /* This is for screens smaller than 768px, which is typically tablet and below */
+    .black-navbar a.logo img {
+        width: 100px; /* Adjust to a smaller width for mobile */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) { /* This is for very small screens */
+    .black-navbar a.logo img {
+        width: 75px; /* Adjust to even smaller width for very small screens */
+        height: auto;
+    }
 }
 
 
@@ -238,10 +262,13 @@ body{
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        padding: 1em;
     }
     .section2 .left-half img, .section2 .right-half img {
         display: block;
         margin: auto;
+        height: 150px;
+        width: 150px;
     }
 }
 
@@ -342,10 +369,10 @@ body{
 }
 
 .right-half img {
-    display: block;
+    /* display: block;
     margin: auto;
     width: 70%; 
-    height: 50%;
+    height: 50%; */
     object-fit: cover;
     border:2px solid #fff;
     border-radius:25px;
@@ -415,8 +442,9 @@ body{
     transition: transform 1.5s;
 }
 .section3 .left-half-s3 img:hover{
-    transform: rotateY(-30deg);
-    transform: rotate3d(1, 1, 1, 360deg);
+    /* transform: rotateY(-30deg);
+    transform: rotate3d(1, 1, 1, 360deg); */
+    transform: scale(1.2);
 } 
 
 
@@ -465,6 +493,17 @@ body{
     margin-left: 120px;
 }
 
+/* Responsive adjustment for mobile devices */
+@media (max-width: 768px) {
+    .profile-container .left {
+        width: 60%;
+        margin-right: 20px;
+        margin-left: 20px; 
+    }
+}
+
+
+
 .profile-container .left h1{
     font-size: 3rem;
     color: #1d1d1f;
@@ -492,6 +531,17 @@ body{
     margin-right: 120px;
     margin-left: 50px;
     margin-top: 50px;
+}
+/* Responsive adjustment for mobile devices */
+@media (max-width: 768px) {
+    .profile-container .right {
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+        margin-right: 120px;
+        margin-left: 20px;
+        margin-top: 50px; 
+    }
 }
 
 .profile-container img {
