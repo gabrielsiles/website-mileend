@@ -15,7 +15,24 @@ body{
 }
 
 
+/* This media query targets most iPhone screen widths in portrait mode */
+@media only screen 
+  and (max-device-width: 414px) { 
+      
+   
 
+    .header-and-navbar {
+        background-image: url('https://images.pexels.com/photos/5185150/pexels-photo-5185150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace with your background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+
+    .header-video {
+        display: none; /* This hides the video */
+    }
+}
 
 /*Style pour le navbar en noir*/
 /* Style for the black text navigation bar */
@@ -185,7 +202,7 @@ body{
     background-image: url('/images/img-mtl.jpg');
     background-size: cover;
     
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -369,10 +386,10 @@ body{
 }
 
 .right-half img {
-    /* display: block;
+    display: block;
     margin: auto;
     width: 70%; 
-    height: 50%; */
+    height: 50%;
     object-fit: cover;
     border:2px solid #fff;
     border-radius:25px;
