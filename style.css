@@ -19,7 +19,17 @@ body{
 @media only screen 
   and (max-device-width: 414px) { 
       
-   
+    body{
+        display: block;
+        background-color: #fbfbfb;
+        font-family: 'Courier New', Courier, monospace;
+        color:#1d1d1f;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        min-width: 320px;
+        height: 100%;
+    }
 
     .header-and-navbar {
         background-image: url('https://images.pexels.com/photos/5185150/pexels-photo-5185150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace with your background image */
@@ -441,7 +451,7 @@ body{
   and (max-device-width: 768px) { 
 
     .section3 {
-        background-image: url('https://images.pexels.com/photos/1101122/pexels-photo-1101122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace with your background image */
+        background-image: none;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -557,6 +567,7 @@ body{
     text-shadow: 4px 1px 8px rgba(0,0,0,0.6);
     margin-top: 0px;
     padding-top: 0px;
+    text-align: left;
 }
 
 .profile-container .left p:hover{
