@@ -436,6 +436,29 @@ body{
     }
 }
 
+/* This media query targets most smartphones in portrait and landscape modes */
+@media only screen 
+  and (max-device-width: 768px) { 
+
+    .section3 {
+        background-image: url('https://images.pexels.com/photos/1101122/pexels-photo-1101122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace with your background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .background-video {
+        display: none; /* This hides the video */
+    }
+}
+
+
+
+
+
+
+
+
 .left-half-s3, .right-half-s3 {
     justify-content: center;
     align-items: center;
