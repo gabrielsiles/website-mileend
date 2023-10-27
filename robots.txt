@@ -1,0 +1,13 @@
+# This is a comment. Comments start with the '#' character.
+User-agent: * # This applies to all web robots
+Disallow: /private/ # Don't crawl the /private/ directory
+Disallow: /temp/ # Don't crawl the /temp/ directory
+Disallow: /images/ # Don't crawl the /images/ directory
+
+# For Google's web robot specifically
+User-agent: Googlebot
+Disallow: /no-google/ # Don't crawl the /no-google/ directory
+Allow: /images/ # Override the previous rule for Googlebot; allow it to crawl the /images/ directory
+
+# Sitemap can also be added (optional)
+Sitemap: https://mileendsoftwarestudios.com/sitemap.xml
