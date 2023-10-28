@@ -2,6 +2,7 @@
 Website for les milend boys
 
 #TODO
+- [ ] Organize file
 - [ ] All project pages
 - [ ] Add team member personal's page
 - [ ] Make search project responsive 
