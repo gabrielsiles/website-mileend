@@ -79,6 +79,11 @@
                 .form-header p {
                     font-size: 16px;
                 }
+
+                .error-message {
+                color: red;
+                font-size: 14px;
+            }
                 
                 </style>  
                 <div class="form-header">
@@ -95,24 +100,22 @@
                     </p>
                   
                   </div>
-
-                  <form
-                  action="https://formspree.io/f/mjvqlqvp"
-                  method="POST"
-                >
-                
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name">
-                
-                  <label for="email">Email:</label>      
-                  <input type="email" id="email" name="email">
-                
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message"></textarea>  
-                
-                  <button type="submit">Send</button>
-                
+                  <form action="https://formspree.io/f/mjvqlqvp" method="POST" id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <span class="error-message" id="error-name"></span>
+        
+                    <label for="email">Email:</label>      
+                    <input type="email" id="email" name="email">
+                    <span class="error-message" id="error-email"></span>
+        
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <span class="error-message" id="error-message"></span>
+        
+                    <button type="submit">Send</button>
                 </form>
+
 
                  <!-- Footer -->
                 <div class="footer">
@@ -130,55 +133,45 @@
                 </div>
             
             
-                <script>
-                    // Get form elements
-                    const form = document.querySelector('form');
-                    const nameInput = document.querySelector('#name');
-                    const emailInput = document.querySelector('#email');
-                    const messageInput = document.querySelector('#message');
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                let isValid = true;
 
-                    // Validate on submit
-                    form.addEventListener('submit', (e) => {
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                const errorName = document.getElementById('error-name');
+                const errorEmail = document.getElementById('error-email');
+                const errorMessage = document.getElementById('error-message');
 
-                    // Name validation
-                    if (nameInput.value === '' || nameInput.value == null) {
+                // Clear previous errors
+                errorName.textContent = '';
+                errorEmail.textContent = '';
+                errorMessage.textContent = '';
 
-                    nameInput.style.border = '1px solid red';
+                // Name validation
+                if (!nameInput.value.trim()) {
+                    errorName.textContent = 'Please enter your name';
+                    isValid = false;
+                }
 
-                    nameInput.insertAdjacentHTML('beforebegin', '<span style="color: red;">Please enter your name</span>');
+                // Email validation
+                if (!emailInput.value.trim()) {
+                    errorEmail.textContent = 'Please enter your email';
+                    isValid = false;
+                }
 
+                // Message validation 
+                if (!messageInput.value.trim()) {
+                    errorMessage.textContent = 'Please let us know how we can help!';
+                    isValid = false;
+                }
+
+                if (!isValid) {
                     e.preventDefault();
-
-                    } 
-
-                    // Email validation
-                    if (emailInput.value === '' || emailInput.value == null) {
-
-                    emailInput.style.border = '1px solid red';
-
-                    emailInput.insertAdjacentHTML('beforebegin', '<span style="color: red;">Please enter your email</span>')
-
-                    e.preventDefault();
-
-                    }
-
-                    // Message validation 
-                    if (messageInput.value === '' || messageInput.value == null) {
-
-                    messageInput.style.border = '1px solid red';
-
-                    messageInput.insertAdjacentHTML('beforebegin', '<span style="color: red;">Please enter a message</span>')
-
-                    e.preventDefault();
-
-                    }
-
-                    });
-
-                   
-
-                  
-                </script>
+                }
+            });
+        </script>
             
     
     </body>
