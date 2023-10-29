@@ -26,5 +26,3 @@ Website for les milend boys
 - Emil Surkhaev
 
 
-# How to run the website
-
