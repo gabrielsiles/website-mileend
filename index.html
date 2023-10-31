@@ -5,12 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Mile End Software Studios</title>
-        <meta name="description" content="Mile End Software Studios - Specializing in intuitive apps, dynamic websites, expert IT consulting, and video game development.">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <title>Mile End Studio</title>
+        <meta name="description" content="Mile End Studio - Specializing in intuitive apps, dynamic websites, expert IT consulting, and video game development.">
         <meta name="keywords" content="software, app development, website development, IT consulting, video games, technology,studios, Gabriel Siles">
-        <link rel="icon" href="images/icon.ico" type="image/x-icon">
-        <link rel="canonical" href="https://mileendsoftwarestudios.com/" />
+        <link rel="icon" href="assets/images/logo.png" type="image/png">
+        <link rel="canonical" href="https://mileend-studio.com/" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     </head>
 
    
@@ -26,31 +28,31 @@
         gtag('config', 'G-XHM244HNFY');
       </script>
 
-        <div class="header-and-navbar">
-            <video autoplay loop muted class="header-video">
-               <source src="/video-header.mp4" type="video/mp4">
-            </video>
-        
-             <div class="black-navbar">
-            <a  class="logo">
-                <img src="images/logo-name.png" alt="Logo Description">
+    <div class="header-and-navbar">
+        <video autoplay loop muted class="header-video">
+            <source src="../assets/videos/video-header.mp4" type="video/mp4">
+        </video>
+
+        <div class="black-navbar">
+            <a href="/index.html" class="logo"> <!-- Here's the change -->
+                <img src="../assets/images/favicon/logo/logo-name.png" alt="Logo Description">
             </a>
             <div class="navbar-center">
-                <a href="index.html" >Home</a>
+                <a href="/index.html">Home</a>
                 <!--<a href="/about.html">About</a>-->
-                <a href="team.html">Team</a>
+                <a href="/pages/team.html">Team</a>
             </div>
-            <a href="contact.html" class="right">Contact</a> 
+            <a href="/pages/contact.html" class="right">Contact</a> 
         </div>
-        
-            <div class="header">
-                <div class="header-content">
-                    <h1><a class="title" >Mile End Software Studios</a></h1>
-                    <p class="subtitle">Make your dreams a reality</p>
-                </div>
+
+        <div class="header">
+            <div class="header-content">
+                <h1><a class="title" >Mile End Studio</a></h1>
+                <p class="subtitle">Make your dreams a reality</p>
             </div>
         </div>
-        
+    </div>
+
             
              
             
@@ -63,8 +65,8 @@
                         <div class="content">
                             <h2>OUR MISSION</h2>
                             <p>
-                                We specialize in developing <strong>intuitive apps</strong> and <strong>dynamic websites</strong>, providing <strong>expert IT consulting</strong>, 
-                                and crafting immersive <strong>video games</strong>. With a focus on <strong>innovation</strong>, <strong>quality</strong>, and <strong>efficiency</strong>, we strive 
+                                We specialize in developing intuitive apps and dynamic websites , providing expert IT consulting , 
+                                and crafting immersive video games . With a focus on innovation , quality , and efficiency , we strive 
                                 to deliver user-centric products and services that not only satisfy our clients' technological needs 
                                 but also exceed their expectations. As we continue to expand our horizons, our mission remains the same
                                 - to blend creativity with technology, inspire digital transformation, and create engaging experiences
@@ -77,23 +79,23 @@
                 <section>  
                     <div class="section2">
                         <div class="left-half">
-                            <img src="images/mobile-app.jpg" alt="Mobile Application Development">
+                            <img src="../assets/images/home/mobile-app.jpg" alt="Mobile Application Development">
                             <h2>Mobile Application Development</h2>
                             <p>We specialize in creating exceptional mobile applications that revolutionize the way you do business. Our team of expert developers leverages cutting-edge technology and innovative strategies to deliver applications that are not just visually appealing, but also exceptionally functional. Our user-centric approach ensures that every application we develop is tailored to suit the unique needs of your business, ensuring optimal user engagement and maximum ROI. Let us transform your vision into a mobile application that sets new standards in the industry.</p>
                         </div>
                         <div class="right-half">
                             <h2>Web Application Development</h2>
                             <p>We also excel in web application development, creating powerful and high-performing websites that propel your business to new heights. Our adept developers are skilled in numerous web technologies, enabling us to build dynamic, responsive, and interactive websites that drive conversions. We are committed to helping businesses grow online with our custom-tailored web solutions. Partner with us today and elevate your web presence with a stellar application that stands out in the digital landscape.</p>
-                            <img src="images/web-app.jpg" alt="Web Application Development">
+                            <img src="../assets/images/home/web-app.jpg" alt="Web Application Development">
                         </div>
                     </div>
                 </section>
                 
                 <!-- Section 3 -->
                 <section class="section3">
-                    <video class="background-video" src="background2-index.mp4" autoplay loop muted playsinline></video>
+                    <video class="background-video" src="../assets/videos/background2-index.mp4" autoplay loop muted playsinline></video>
                     <div class="left-half-s3">
-                        <img src="images/lc-design.jpg" alt="Video Game Development">
+                        <img src="../assets/images/home/lc-design.jpg" alt="Video Game Development">
                     </div>
                     <div class="right-half-s3">
                         <h2>Video Game Development</h2>
@@ -115,7 +117,7 @@
                         <a href="your-instagram-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div> -->
                     <div class="footer-company">
-                        <p>Mile End Software Studios &copy; 2023</p>
+                        <p>Mile End Studio &copy; 2023</p>
                     </div>
                 </div>
             </div>
@@ -162,6 +164,16 @@
             }
         });
 
+        $(document).ready(function() {
+            $(".content p").hover(
+                function() { // Mouse enter
+                    $(this).closest(".section1").addClass("blurrier");
+                }, 
+                function() { // Mouse leave
+                    $(this).closest(".section1").removeClass("blurrier");
+                }
+            );
+        });
 
 
      </script>   

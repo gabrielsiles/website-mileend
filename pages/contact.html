@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- Compatible avec telephone -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
         <title>Mile End Software Studios</title>
         <meta name="description" content="Mile End Software Studios - Specializing in intuitive apps, dynamic websites, expert IT consulting, and video game development.">
         <meta name="keywords" content="software, app development, website development, IT consulting, video games, technology,studios, Gabriel Siles">
-        <link rel="icon" href="images/icon.ico" type="image/x-icon">
-        <link rel="canonical" href="https://mileendsoftwarestudios.com/contact.html" />
+        <link rel="icon" href="../assets/images/logo.png" type="image/png">
+        <link rel="canonical" href="https://mileend-studio/contact.html" />
         <meta name="google-site-verification" content="CH0ufVcwB_giTorIV2-L5MN9w0f9s40fmO_zAZ-g6Pk" />
     </head>
 
@@ -28,50 +28,60 @@
 
         
             <div class="black-navbar">
-                <a  class="logo">
-                    <img src="images/logo-name.png" alt="Logo Description">
+                <a href="/index.html" class="logo"> <!-- Here's the change -->
+                    <img src="../assets/images/favicon/logo/logo-name.png" alt="Logo Description">
                 </a>
                 <div class="navbar-center">
                     <a href="/index.html">Home</a>
                     <!--<a href="/about.html">About</a>-->
-                    <a href="/team.html">Team</a>
+                    <a href="/pages/team.html">Team</a>
                 </div>
-                <a href="/contact.html" class="right">Contact</a> 
+                <a href="/pages/contact.html" class="right">Contact</a> 
             </div>
 
             <style>
+                
                 form {
-                    max-width: 600px;
-                    margin: 30px auto; 
-                    padding: 20px;
-                    border: 1px solid #ddd;  
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                    border-radius: 8px;
-                    }
-                
+                max-width: 600px;
+                margin: 30px auto;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                padding-bottom: 5%;
+                padding-top: 5%;
+                border: 1px solid #ddd;  
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                display: flex;         /* Make the form a flex container */
+                flex-direction: column; /* Align children vertically */
+                align-items: center;   /* Center children horizontally */
+                }
+
                 label, input, textarea {
-                  display: block;
-                  width: 60%;
-                  margin-bottom: 10px;
+                    display: block;
+                    width: 60%; 
+                    margin-bottom: 10px;
                 }
-                
+
                 input, textarea {
-                  border: 1px solid #ddd;
-                  border-radius: 4px;  
-                  padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;  
+                    padding: 10px;
                 }
-                
+
                 button {
-                  background: #007bff;
-                  color: #fff;
-                  border: 0;
-                  border-radius: 4px;
-                  padding: 10px 20px;
+                    background: #007bff;
+                    color: #fff;
+                    border: 0;
+                    border-radius: 4px;
+                    padding: 10px 20px;
+                    margin-left: auto; /* Center the button */
+                    margin-right: auto;
                 }
-                
+
                 button:hover {
-                  background: #0062cc;
+                    background: #57e465;
                 }
+
                 .form-header {
                     text-align: center; 
                 }
@@ -81,9 +91,10 @@
                 }
 
                 .error-message {
-                color: red;
-                font-size: 14px;
-            }
+                    color: red;
+                    font-size: 14px;
+                }
+
                 
                 </style>  
                 <div class="form-header">
@@ -127,7 +138,7 @@
                             <a href="your-instagram-link" target="_blank"><i class="fab fa-instagram"></i></a>
                         </div> -->
                         <div class="footer-company">
-                            <p>Mile End Software Studios &copy; 2023</p>
+                            <p>Mile End Studio &copy; 2023</p>
                         </div>
                     </div>
                 </div>

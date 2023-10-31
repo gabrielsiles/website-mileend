@@ -36,12 +36,32 @@ body{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden; 
+        height: 90vh;
+        min-height: 400px;
         
     }
 
     .header-video {
-        display: none; /* This hides the video */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.8;
     }
+    
+
+    /* Clearing the float at the end of .header-and-navbar */
+    .header-and-navbar::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
 }
 
 /*Style pour le navbar en noir*/
@@ -143,7 +163,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Align the title and paragraph vertically */
-    height: 80vh;
+    height: 60vh;
     text-align: center; /* Center the text */
     position: relative;
     z-index: 1;
@@ -176,14 +196,16 @@ body{
 
 .header-video {
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 200%;
     object-fit: cover;
     z-index: -1;
     opacity: 0.8;
 }
+
 
 /* Responsive text size */
 @media (max-width: 768px) {
@@ -209,58 +231,67 @@ body{
 
 /* Style pour la page home pour le 2 ieme div */
 .section1 {
-    background-image: url('/images/img-mtl.jpg');
-    background-size: cover;
-    
-    height: 120vh;
+    position: relative; /* Required to position the pseudo-element */
     width: 100%;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     color: #fbfbfb;
-    /* -webkit-animation: kenburns-top 5s ease-out both;
-    animation: kenburns-top 5s ease-out both; */
-   
+    font-weight: 550;
+    align-items: center;
 }
 
-/* @keyframes kenburns-top {
-    0% {
-        background-position: left bottom;
-        transform: scale(1);
-    }
-    100% {
-        background-position: right top;
-        transform: scale(1.2);
-    }
-} */
+.section1::before {
+    content: ""; /* Empty content for the pseudo-element */
+    background-image: url('../../assets/images/home/img-mtl.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: blur(0.01px); /* Apply the blur effect here */
+    transition: filter 0.3s ease;
+    /* Position and size the pseudo-element to take up the full space of its parent */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Ensure the background is behind the actual content */
+}
+
 
 
 .content {
-    margin-bottom: 250px;
+    margin : 10%;
+    margin-top: 1%;
     text-align: center;
     padding: 2em; /* some padding around your text */
     width: 80%;
-    height: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Horizontal centering of children */
+    text-align: center; /* Center the text of children */
 }
+
 
 .content h1 {
     font-size: 2.5rem;
-    margin: 30px;
-    margin-top: 0px;
     
 }
-.content p:hover{
-    scale: 1.2;
+
+.section1.blurrier::before {
+    filter: blur(1.5px); /* Adjust the value as needed */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* This will scale the paragraph when hovered */
+.content p {
+    transition: transform 0.1s ease; /* Add smooth transition */
 }
+
+.content p:hover{
+    scale: 1.05;
+}
+
+
 
 .content h1, .content p {
     animation: fadeIn 2s ease-in-out;
@@ -279,11 +310,13 @@ body{
     color: #fbfbfb;
     display: flex;
     justify-content: space-between;
+    height:120vh
 }
 
 @media screen and (max-width: 1000px) {
     .section2 {
         display: table;
+        
     }
     .section2 .left-half, .section2 .right-half {
         display: table-cell;
@@ -304,8 +337,9 @@ body{
 .left-half, .right-half {
     width: 48%; /* 100% - space between two halves */
     box-sizing: border-box;
-    text-align: center;
-    margin:50px;
+    text-align: justify;
+    margin:5%;
+    margin-bottom: 0;
     overflow: hidden;
 }
 
@@ -387,9 +421,9 @@ body{
 
 .left-half img {
     display: block;
-    margin: auto;
+    margin: 10%;
     width: 70%; 
-    height: 50%;
+    height: 30%;
     object-fit: cover;
     border:2px solid #fff;
     border-radius:25px;
@@ -397,9 +431,9 @@ body{
 
 .right-half img {
     display: block;
-    margin: auto;
+    margin: 10%;
     width: 70%; 
-    height: 50%;
+    height: 30%;
     object-fit: cover;
     border:2px solid #fff;
     border-radius:25px;
@@ -440,11 +474,23 @@ body{
 }
 
 
-@media screen and (max-width: 1000px) { /* adjust the value as needed */
+@media screen and (max-width: 1000px) {
     .section3 {
-        display: table;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* For centering the text within its container */
+    }
+    .section3 .left-half-s3, .section3 .right-half-s3 {
+        width: 50%; /* For making each half take full width at this breakpoint */
+        padding: 20px; /* Optional padding for better visual spacing */
+    }
+    .section3 .left-half-s3 img {
+        width: 80%; /* Or whatever width you find visually appealing */
+        margin: 0 auto; /* This will horizontally center block-level elements */
     }
 }
+
 
 /* This media query targets most smartphones in portrait and landscape modes */
 @media only screen 
@@ -474,7 +520,7 @@ body{
     align-items: center;
     width: 48%; /* 100% - space between two halves */
     box-sizing: border-box;
-    margin:100px;
+    margin:5%;
     height: 100%;
     
 }
@@ -656,7 +702,7 @@ body{
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
